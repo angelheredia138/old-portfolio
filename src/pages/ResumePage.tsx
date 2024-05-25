@@ -11,7 +11,7 @@ const ResumePage = () => {
       style={{
         maxWidth: "800px",
         margin: "auto",
-        paddingTop: "50px",
+        paddingTop: "100px",
         paddingBottom: "25px",
       }}
     >
