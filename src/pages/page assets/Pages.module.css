@@ -42,6 +42,8 @@
     border-radius: 4px; /* Slightly larger to account for the padding */
     aspect-ratio: calc(16/9);
 }
+
+
 .linkStyle {
     color: #98c0ff; /* Example: A lighter shade of blue */
     text-decoration: none; /* Removes underline, optional */

@@ -24,18 +24,17 @@ const ProjectPage = () => {
           <h2 className={styles.sectionTitle1}>Portfolio Website</h2>
           <p className={styles.sectionText}>
             This website is one of my personal projects! I wrote this website
-            copmpletely using React and TypeScript with help from Vite and some
+            completely using React and TypeScript with help from Vite and some
             Bootstrap components! This was my first time ever using any web dev
-            tools, HTML, TypeScript and all that! If you'd like to see a more
+            tools, HTML, TypeScript, and all that! If you'd like to see a more
             detailed breakdown of my journey while building this website, check
             out{" "}
             <Link to="/about" className={styles.linkStyle}>
-              {" "}
               About this Website
             </Link>
-            {""}. There you can find where I started, and where I am now! I plan
-            to continuously update this website with any other projects I work
-            on, as well as any style changes whenever I do make any!
+            . There you can find where I started, and where I am now! I plan to
+            continuously update this website with any other projects I work on,
+            as well as any style changes whenever I do make any!
           </p>
         </div>
         <div className="col-md-6">
@@ -49,30 +48,30 @@ const ProjectPage = () => {
           <p className={styles.sectionText}>
             This was my final project for my Principles in Application
             Development class, the task was to completely come up with and
-            develop an app that followed the following criteria: the project
-            must have persistent data storage, must use the MVVM architecture so
-            that data, view, and logic of the app are divided into appropriate
-            modules, it must use remote Web Services and Web API calls, and it
-            must use map and location-based map functionality. The video to the
-            right is my final techincal presentation, detailing and showing a
-            quick demo of the app. If you would like to see the app's source
-            code, check it out on my
+            develop an app that followed the criteria: persistent data storage,
+            MVVM architecture, remote Web Services and Web API calls, and map
+            and location-based functionality. The video to the right is my final
+            technical presentation, detailing and showing a quick demo of the
+            app. If you would like to see the app's source code, check it out on
+            my
             <a
-              className={styles.linkStyle}
               href="https://github.com/angelheredia138/"
+              className={styles.linkStyle}
             >
               {" "}
-              GitHub.
+              GitHub
             </a>
+            .
           </p>
         </div>
         <div className="col-md-6">
-          <iframe
-            width="560"
-            height="315"
-            src="https://drive.google.com/file/d/1mRC1ygp5W-lJagxYucOhRNY4ILQlZT9p/preview?usp=drivesdk"
-            data-allow="encrypted-media"
-          ></iframe>
+          <div className={styles.sectionVideo}>
+            <iframe
+              style={{ width: "100%", height: "100%", border: "none" }}
+              src="https://drive.google.com/file/d/1mRC1ygp5W-lJagxYucOhRNY4ILQlZT9p/preview?usp=drivesdk"
+              allow="encrypted-media"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>
