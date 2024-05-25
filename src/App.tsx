@@ -43,7 +43,7 @@ const App: React.FC = () => {
 
   return (
     <ThemeSelectorProvider>
-      <BrowserRouter basename="/portfolio-website">
+      <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
