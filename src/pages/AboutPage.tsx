@@ -164,7 +164,7 @@ const AboutPage = () => {
           contact me or find me via GitHub, LinkedIn, and Email! I changed my
           Resume page to also have contact info for me, as well as added some
           social media links to my Navbar for ease of access. This means we are
-          at the current iteration of the website!
+          at the current iteration of the website as of May 25th, 2024!
         </p>
         <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
           If you took the time to read this, thank you so much! It means the
