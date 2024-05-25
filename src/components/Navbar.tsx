@@ -18,6 +18,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <Link
           className={`navbar-brand ${styles.navbarBrand}`}
+          style={{ paddingLeft: "10px" }}
           to="/"
           onClick={closeNavbar}
         >
