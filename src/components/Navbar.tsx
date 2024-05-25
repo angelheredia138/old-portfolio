@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Navbar.module.css"; // Ensure styles are imported
+import styles from "./Navbar.module.css"; // Make sure styles are imported
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +23,32 @@ const Navbar = () => {
         >
           Angel Heredia
         </Link>
+        <div
+          className="navbar-social-links"
+          style={{ display: "inline-block" }}
+        >
+          <a
+            href="https://github.com/angelheredia138"
+            className={`navbar-link ${styles.navbarLink}`}
+            style={{ marginLeft: "20px", fontSize: "25px" }}
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a
+            href="https://linkedin.com/in/angel-heredia-a9438b27a"
+            className={`navbar-link ${styles.navbarLink}`}
+            style={{ marginLeft: "20px", fontSize: "25px" }}
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a
+            href="mailto:herediafangel@gmail.com"
+            className={`navbar-link ${styles.navbarLink}`}
+            style={{ marginLeft: "20px", fontSize: "25px" }}
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
+          </a>
+        </div>
         <button
           className="navbar-toggler"
           type="button"

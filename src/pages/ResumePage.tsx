@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./page assets/Pages.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const ResumePage = () => {
   return (
@@ -17,11 +20,7 @@ const ResumePage = () => {
         This is my current resume as of May 2024.
       </p>
       <div
-        style={{
-          position: "relative",
-          overflow: "hidden",
-          paddingTop: "100%", // 16:9 Aspect Ratio, adjust if needed
-        }}
+        style={{ position: "relative", overflow: "hidden", paddingTop: "100%" }}
       >
         <iframe
           style={{
@@ -37,7 +36,36 @@ const ResumePage = () => {
           src="https://drive.google.com/file/d/18B99yQXP3jeKf213axJeoG_8FrOGP0JW/preview?usp=drivesdk"
         ></iframe>
       </div>
-      <p className={styles.sectionText1}>insert contact me here</p>
+      <p
+        className={styles.sectionText1}
+        style={{ paddingTop: "20px", paddingBottom: "20px" }}
+      >
+        If you would like to contact me, or learn more about me, below is a link
+        to my Email and my GitHub!
+      </p>
+      <div style={{ fontSize: "24px", textAlign: "center", margin: "20px" }}>
+        <a
+          href="https://github.com/angelheredia138"
+          style={{ margin: "10px" }}
+          className={styles.linkStyle}
+        >
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        <a
+          href="https://linkedin.com/in/angel-heredia-a9438b27a"
+          style={{ margin: "10px" }}
+          className={styles.linkStyle}
+        >
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <a
+          href="mailto:herediafangel@gmail.com"
+          style={{ margin: "10px" }}
+          className={styles.linkStyle}
+        >
+          <FontAwesomeIcon icon={faEnvelope} />
+        </a>
+      </div>
     </div>
   );
 };

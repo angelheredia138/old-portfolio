@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page assets/Pages.module.css";
 import placeholderImage from "./page assets/placeholder.jpg";
 import website from "./page assets/website.png";
+import { Link } from "react-router-dom";
 
 const ProjectPage = () => {
   return (
@@ -27,10 +28,14 @@ const ProjectPage = () => {
             Bootstrap components! This was my first time ever using any web dev
             tools, HTML, TypeScript and all that! If you'd like to see a more
             detailed breakdown of my journey while building this website, check
-            out About this website (maybe link). There you can find where I
-            started, and where I am now! I plan to continuously update this
-            website with any other projects I work on, as well as any style
-            changes whenever I do make any!
+            out{" "}
+            <Link to="/about" className={styles.linkStyle}>
+              {" "}
+              About this Website
+            </Link>
+            {""}. There you can find where I started, and where I am now! I plan
+            to continuously update this website with any other projects I work
+            on, as well as any style changes whenever I do make any!
           </p>
         </div>
         <div className="col-md-6">
@@ -51,8 +56,14 @@ const ProjectPage = () => {
             must use map and location-based map functionality. The video to the
             right is my final techincal presentation, detailing and showing a
             quick demo of the app. If you would like to see the app's source
-            code, check it out on my GitHub (maybe make the word github a link
-            to github or something).
+            code, check it out on my
+            <a
+              className={styles.linkStyle}
+              href="https://github.com/angelheredia138/"
+            >
+              {" "}
+              GitHub.
+            </a>
           </p>
         </div>
         <div className="col-md-6">

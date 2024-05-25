@@ -21,7 +21,13 @@
 .navbarBrand:focus {
     color: #d1d1d1 !important;
 }
-
+.navbarLink {
+    color: #ffffff !important;
+    transition: color 0.2s ease-in-out;
+}
+.navbarLink:hover, .navbarLink:focus {
+    color: #d1d1d1 !important;
+}
 .navbar-collapse {
     transition: all 0.4s ease; /* Smooth transition for all changes */
 }
