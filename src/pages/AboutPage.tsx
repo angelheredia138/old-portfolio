@@ -169,7 +169,7 @@ const AboutPage = () => {
         <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
           If you took the time to read this, thank you so much! It means the
           world to me that someone was interested in how I created this website.
-          I loved being able to do it, and learn along the way!
+          I loved being able to do it, while learning along the way!
         </p>
       </div>
     </div>
