@@ -1,5 +1,5 @@
 // DarkModeToggle.tsx
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface DarkModeToggleProps {
   isDarkMode: boolean;
@@ -10,9 +10,19 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({
   isDarkMode,
   toggleDarkMode,
 }) => {
+  const [mode, setMode] = useState(isDarkMode);
+
+  useEffect(() => {
+    setMode(isDarkMode);
+  }, [isDarkMode]);
+
+  const handleClick = () => {
+    toggleDarkMode();
+  };
+
   return (
     <button
-      onClick={toggleDarkMode}
+      onClick={handleClick}
       style={{
         position: "fixed",
         bottom: "20px",
@@ -21,15 +31,15 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({
         cursor: "pointer",
         borderRadius: "50%",
         padding: "10px 15px",
-        backgroundColor: isDarkMode ? "#FFF" : "#333",
-        color: isDarkMode ? "#333" : "#FFF",
+        backgroundColor: mode ? "#FFF" : "#333",
+        color: mode ? "#333" : "#FFF",
         border: "none",
         boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
         fontSize: "24px",
       }}
       aria-label="Toggle dark mode"
     >
-      {isDarkMode ? "🌞" : "🌜"}
+      {mode ? "🌞" : "🌜"}
     </button>
   );
 };

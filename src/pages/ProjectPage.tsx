@@ -14,7 +14,14 @@ const ProjectPage = () => {
             At the moment, I have only a couple projects to show off, this
             portfolio website, and my wardrobe app. To find more details about
             each, you can read the blurbs written below, or take a look at my
-            GitHub for the source code!
+            <a
+              href="https://github.com/angelheredia138/"
+              className={styles.linkStyle}
+            >
+              {" "}
+              GitHub
+            </a>{" "}
+            for the source code!
           </p>
         </div>
       </div>
@@ -26,9 +33,9 @@ const ProjectPage = () => {
             This website is one of my personal projects! I wrote this website
             completely using React and TypeScript with help from Vite and some
             Bootstrap components! This was my first time ever using any web dev
-            tools, HTML, TypeScript, and all that! If you'd like to see a more
-            detailed breakdown of my journey while building this website, check
-            out{" "}
+            tools, HTML, TypeScript, and all that comes with it. If you'd like
+            to see a more detailed breakdown of my journey while building this
+            website, check out{" "}
             <Link to="/about" className={styles.linkStyle}>
               About this Website
             </Link>

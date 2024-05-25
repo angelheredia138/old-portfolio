@@ -15,7 +15,9 @@ const ResumePage = () => {
         paddingBottom: "25px",
       }}
     >
-      <h1 className={styles.sectionTitle1}>Resume/Contact Info</h1>
+      <h1 className={styles.sectionTitle1} style={{ paddingTop: "50px" }}>
+        Resume/Contact Info
+      </h1>
       <p className={styles.sectionText1}>
         This is my current resume as of May 2024.
       </p>

@@ -52,3 +52,13 @@
 .linkStyle:hover {
     color: #35a; /* Darker blue when hovered, optional */
 }
+.hiddenLinkStyle {
+    color: inherit; /* Example: A lighter shade of blue */
+    text-decoration: none; /* Removes underline, optional */
+}
+
+.hiddenLinkStyle:hover {
+    color: inherit; /* Example: A lighter shade of blue */
+    text-decoration: none; /* Removes underline, optional */
+
+}

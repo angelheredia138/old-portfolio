@@ -7,35 +7,63 @@ import AboutPage from "./pages/AboutPage";
 import ResumePage from "./pages/ResumePage";
 import ProjectPage from "./pages/ProjectPage";
 import DarkModeToggle from "./components/DarkModeToggle";
+import ThemeSelector from "./components/ThemeSelector";
+import {
+  ThemeSelectorProvider,
+  useThemeSelector,
+} from "./components/ThemeSelectorContext";
 import "./App.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-function App() {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    return savedMode === "true" ? true : false;
+const App: React.FC = () => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const savedTheme = localStorage.getItem("selectedTheme");
+    return savedTheme === "body-dark-mode";
   });
 
+  const changeTheme = (theme: string) => {
+    document.body.className = ""; // Reset any existing theme classes
+    if (theme !== "default") {
+      document.body.classList.add(theme);
+    }
+    localStorage.setItem("selectedTheme", theme);
+  };
+
+  const toggleDarkMode = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    const theme = newMode ? "body-dark-mode" : "default";
+    changeTheme(theme);
+  };
+
   useEffect(() => {
-    document.body.className = darkMode ? "dark-mode" : "";
-    localStorage.setItem("darkMode", darkMode.toString());
-  }, [darkMode]);
+    const savedTheme = localStorage.getItem("selectedTheme") || "default";
+    changeTheme(savedTheme);
+  }, []);
 
   return (
-    <BrowserRouter basename="/portfolio-website">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/resume" element={<ResumePage />} />
-        <Route path="/projects" element={<ProjectPage />} />
-      </Routes>
-      <DarkModeToggle
-        isDarkMode={darkMode}
-        toggleDarkMode={() => setDarkMode(!darkMode)}
-      />
-    </BrowserRouter>
+    <ThemeSelectorProvider>
+      <BrowserRouter basename="/portfolio-website">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/projects" element={<ProjectPage />} />
+        </Routes>
+        <DarkModeToggle
+          isDarkMode={isDarkMode}
+          toggleDarkMode={toggleDarkMode}
+        />
+        <ThemeSelectorWrapper />
+      </BrowserRouter>
+    </ThemeSelectorProvider>
   );
-}
+};
+
+const ThemeSelectorWrapper: React.FC = () => {
+  const { showThemeSelector } = useThemeSelector();
+  return <ThemeSelector show={showThemeSelector} />;
+};
 
 export default App;
