@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <Link
           className={`navbar-brand ${styles.navbarBrand}`}
-          to="/portfolio-website"
+          to="/"
           onClick={closeNavbar}
         >
           Angel Heredia
