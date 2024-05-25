@@ -1,13 +1,14 @@
 {
-  "homepage": "https://angelheredia138.github.io/",
+  "homepage": "https://angelheredia138.github.io/portfolio-website/",
   "name": "portfolio-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

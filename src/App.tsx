@@ -22,7 +22,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio-website">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
