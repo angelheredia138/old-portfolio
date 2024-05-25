@@ -193,7 +193,7 @@ const AboutPage: React.FC = () => {
           that I wanted to use! I would hate for these cool colors to go to
           waste, so use them! My best friend,{" "}
           <Link
-            to="/src/pages/page assets/bison.gif"
+            to="https://www.seanfitzgerald.com/wp-content/uploads/sfitzgerald_bison_wallow_500px.gif"
             className={styles.hiddenLinkStyle}
           >
             Isaiah
