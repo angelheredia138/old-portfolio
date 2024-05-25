@@ -1,0 +1,39 @@
+/* Navbar.module.css */
+.navbarCustom {
+    background-color: #61677A !important; /* Dark blue background */
+    border-bottom: 3px solid #D8D9DA;
+
+}
+
+.navbarBrand {
+    font-size: 1.4rem;
+    color: #ffffff !important;
+}
+
+.navLink {
+    color: #ffffff !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover,
+.navLink:focus,
+.navbarBrand:hover,
+.navbarBrand:focus {
+    color: #d1d1d1 !important;
+}
+
+.navbar-collapse {
+    transition: all 0.4s ease; /* Smooth transition for all changes */
+}
+
+.navbar-collapse.collapsing {
+    transition: transform 0.4s ease !important;
+    transform: scaleY(0) !important;
+    transform-origin: top !important;
+}
+
+.navbar-collapse.show {
+    transition: transform 0.4s ease !important;
+    transform: scaleY(1) !important;
+    display: block !important; /* Ensures the display is correct during transition */
+}
