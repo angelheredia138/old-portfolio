@@ -36,7 +36,7 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href="https://linkedin.com/in/angel-heredia-a9438b27a"
+            href="https://www.linkedin.com/in/herediafangel/"
             className={`navbar-link ${styles.navbarLink}`}
             style={{ marginLeft: "20px", fontSize: "25px" }}
           >

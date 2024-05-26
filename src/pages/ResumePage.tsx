@@ -54,7 +54,7 @@ const ResumePage = () => {
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <a
-          href="https://linkedin.com/in/angel-heredia-a9438b27a"
+          href="https://www.linkedin.com/in/herediafangel/"
           style={{ margin: "10px" }}
           className={styles.linkStyle}
         >
