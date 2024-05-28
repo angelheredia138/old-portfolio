@@ -71,6 +71,6 @@ Don't forget to give the project a star! Thanks again!
 
 - **Email**: herediafangel@gmail.com
 - **GitHub**: [@angelheredia138](https://github.com/angelheredia138)
-- **LinkedIn**: [Angel Heredia](https://linkedin.com/in/angel-heredia-a9438b27a)
+- **LinkedIn**: [Angel Heredia](www.linkedin.com/in/herediafangel)
 
 Thank you for visiting my portfolio repository!
