@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./page assets/Pages.module.css";
-import placeholderImage from "./page assets/placeholder.jpg";
+import retroGames from "./page assets/retro games.png";
 import website from "./page assets/website.png";
 import { Link } from "react-router-dom";
 
@@ -79,6 +79,44 @@ const ProjectPage = () => {
               allow="encrypted-media"
             ></iframe>
           </div>
+        </div>
+      </div>
+      <div className="row align-items-center" style={{ padding: "50px 0" }}>
+        <div className="col-md-6">
+          <h2 className={styles.sectionTitle1}>Retro Games in JavaScript</h2>
+          <p className={styles.sectionText}>
+            The Retro Games Collection is one of my latest personal projects,
+            where I've recreated classic games like 2048, Pong, Snake, and
+            Minesweeper using React. This project allowed me to dive deep into
+            modern web technologies and enhance my JavaScript and game
+            development skills. Each game is fully interactive and provides a
+            nostalgic gaming experience with a modern twist. If you'd like to
+            explore the source code and see these games in action, check out the
+            Retro Games Collection on my{" "}
+            <a
+              href="https://github.com/angelheredia138/"
+              className={styles.linkStyle}
+            >
+              {" "}
+              GitHub
+            </a>
+            . Or, visit it{" "}
+            <a
+              href="https://angel-heredia.com/retro-games-in-javascript"
+              className={styles.linkStyle}
+            >
+              {" "}
+              here
+            </a>{" "}
+            and play a few games!
+          </p>
+        </div>
+        <div className="col-md-6">
+          <img
+            src={retroGames}
+            alt="RetroGameSimulator"
+            className={styles.sectionBigImg}
+          />
         </div>
       </div>
     </div>

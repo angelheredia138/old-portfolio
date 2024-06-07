@@ -200,7 +200,35 @@ const AboutPage: React.FC = () => {
           </Link>
           , helped a lot with the colors. I really needed a creative eye, and he
           helped. These were some of our favorites. The themes are based on my
-          friends and their favorite colors.
+          friends and their favorite colors. (last updated 5/25)
+        </p>
+        <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
+          6/6 Update! I added a new project to this portfolio, a retro game
+          simulator written in JavaScript, this will probably be my last
+          personal project written in JavaScript! I want to venture into other
+          cool stuff to build my portfolio, as I feel I have a solid foundation
+          in JS at the moment! Check it out{" "}
+          <Link
+            to="https://angel-heredia.com/retro-games-in-javascript"
+            className={styles.linkStyle}
+          >
+            here
+          </Link>
+          ! If you wanna view the source code, check it out on my{" "}
+          <a
+            href="https://github.com/angelheredia138/"
+            className={styles.linkStyle}
+          >
+            {" "}
+            GitHub
+          </a>
+          , or for quick blurb about it, check my{" "}
+          <Link to="/projects" className={styles.linkStyle}>
+            projects page
+          </Link>
+          ! I had a lot of fun doing this project, it helped me learn a lot
+          about JS and gain some more experience! That's it for this update,
+          thank you for reading!
         </p>
       </div>
     </div>
