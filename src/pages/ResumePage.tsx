@@ -19,7 +19,7 @@ const ResumePage = () => {
         Resume/Contact Info
       </h1>
       <p className={styles.sectionText1}>
-        This is my current resume as of May 2024.
+        This is my current resume as of June 2024.
       </p>
       <div
         style={{ position: "relative", overflow: "hidden", paddingTop: "100%" }}
