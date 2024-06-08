@@ -35,7 +35,7 @@ const ResumePage = () => {
             maxWidth: "100%",
             maxHeight: "100%",
           }}
-          src="https://drive.google.com/file/d/1IMpgGCNlQTeL8rSCANpPzpF_zuBSAiXk/preview?usp=drivesdk"
+          src="https://drive.google.com/file/d/1CzPh9c3KO65iWTxfcTZFg14svqF_PYap/preview?usp=drivesdk"
         ></iframe>
       </div>
       <p
