@@ -3,10 +3,13 @@ import styles from "./page assets/Pages.module.css";
 import placeholderImage from "./page assets/placeholder.jpg";
 import myFace from "./page assets/my face.png";
 import { Link } from "react-router-dom";
+import BlogAlertModal from "../components/BlogAlertModal";
 
 const HomePage = () => {
   return (
     <div className="container">
+      <BlogAlertModal />
+
       <div className="row align-items-center" style={{ padding: "100px 0" }}>
         <div className="col-md-6">
           <h1 className={styles.sectionTitle}>Welcome to My Portfolio</h1>
@@ -22,7 +25,22 @@ const HomePage = () => {
           <img src={myFace} alt="my face" className={styles.sectionImg} />
         </div>
       </div>
-
+      {/* New Blog Page Section */}
+      <div className="row align-items-center" style={{ padding: "50px 0" }}>
+        <div className="col-md-12">
+          <h2 className={styles.sectionTitle1}>New Blog Page!</h2>
+          <p className={styles.sectionText}>
+            I have recently added a new blog page to this website where I will
+            be sharing ongoing updates about this website and any blog posts
+            about potential projects I am working on. Stay updated with my
+            latest work and thoughts by visiting the blog page{" "}
+            <Link to="/blog" className={styles.linkStyle}>
+              here
+            </Link>
+            !
+          </p>
+        </div>
+      </div>
       <div className="row align-items-center" style={{ padding: "50px 0" }}>
         <div className="col-md-12">
           <h2 className={styles.sectionTitle1}>Bit About Me</h2>

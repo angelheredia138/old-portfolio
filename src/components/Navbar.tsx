@@ -94,6 +94,15 @@ const Navbar = () => {
                 Resume/Contact Info
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${styles.navLink}`}
+                to="/blog"
+                onClick={closeNavbar}
+              >
+                Blog Page
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

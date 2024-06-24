@@ -230,6 +230,16 @@ const AboutPage: React.FC = () => {
           about JS and gain some more experience! That's it for this update,
           thank you for reading!
         </p>
+        <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
+          6/23 Update! For ongoing updates regarding this website, as well as
+          blog posts on potential projects I am working on, check out the new
+          blog page{" "}
+          <Link to="/blog" className={styles.linkStyle}>
+            here
+          </Link>
+          . I will be sharing more detailed updates and insights about my
+          projects and experiences there. Stay tuned!
+        </p>
       </div>
     </div>
   );

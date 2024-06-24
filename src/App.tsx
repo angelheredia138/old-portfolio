@@ -14,6 +14,7 @@ import {
 } from "./components/ThemeSelectorContext";
 import "./App.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import BlogPage from "./pages/BlogPage";
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
@@ -50,6 +51,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
         <DarkModeToggle
           isDarkMode={isDarkMode}

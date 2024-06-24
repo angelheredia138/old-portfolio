@@ -1,30 +1,30 @@
 body {
-    background-color: #F1F6F9 !important; /* light gray or white */
-    color: #212A3E !important; /* dark text for light background */
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f1f6f9 !important; /* light gray or white */
+  color: #212a3e !important; /* dark text for light background */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .body-dark-mode {
-    background-color: #272829 !important; 
-    color: #FFF6E0 !important; 
+  background-color: #272829 !important;
+  color: #fff6e0 !important;
 }
 
 .body-angel {
-    background-color: #1A120B !important; /* Coffee color */
-    color: #E5E5CB !important; /* Cream text */
+  background-color: #1a120b !important; /* Coffee color */
+  color: #e5e5cb !important; /* Cream text */
 }
 
 .body-azi {
-    background-color: #352F44 !important; /* Lilac color */
-    color: #EDE0D3 !important; /* White text */
+  background-color: #352f44 !important; /* Lilac color */
+  color: #ede0d3 !important; /* White text */
 }
 
 .body-euan {
-    background-color: #060047 !important; /* Deep blue background */
-    color: #E90064 !important; /* Neon green text */
+  background-color: #060047 !important; /* Deep blue background */
+  color: #e90064 !important; /* Neon green text */
 }
 
 .body-isaiah {
-    background-color: #5F6F52 !important; /* Green background */
-    color: #FEFAE0 !important; /* Light text */
+  background-color: #5f6f52 !important; /* Green background */
+  color: #fefae0 !important; /* Light text */
 }

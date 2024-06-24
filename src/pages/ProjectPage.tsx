@@ -51,31 +51,35 @@ const ProjectPage = () => {
 
       <div className="row align-items-center" style={{ padding: "50px 0" }}>
         <div className="col-md-6">
-          <h2 className={styles.sectionTitle1}>MyDrobe</h2>
+          <h2 className={styles.sectionTitle1}>Spotify Playback Controller</h2>
           <p className={styles.sectionText}>
-            This was my final project for my Principles in Application
-            Development class, the task was to completely come up with and
-            develop an app that followed the criteria: persistent data storage,
-            MVVM architecture, remote Web Services and Web API calls, and map
-            and location-based functionality. The video to the right is my final
-            technical presentation, detailing and showing a quick demo of the
-            app. If you would like to see the app's source code, check it out on
-            my
+            This project was born out of necessity. Whenever I played video
+            games, alt-tabbing to control my Spotify playback would sometimes
+            crash my computer. To solve this, I coded this project, with the
+            intention of integrating it with a Raspberry Pi 4 connected to a
+            touchscreen, allowing me to manage my Spotify playback seamlessly.
+            With this setup, I can skip, pause, play, and change playlists
+            without needing to alt-tab, ensuring a smooth gaming experience. The
+            controller features a user-friendly interface built with React and
+            Chakra UI, and communicates with Spotify's API through a Django
+            backend. Check out the source code on
             <a
-              href="https://github.com/angelheredia138/"
+              href="https://github.com/angelheredia138/spotify-playback-control-public"
               className={styles.linkStyle}
             >
               {" "}
-              GitHub
+              GitHub{" "}
             </a>
-            .
+            and try it out for yourself! If you'd like to check out a small
+            physical and techincal demo of it, check out this video on the
+            right!
           </p>
         </div>
         <div className="col-md-6">
           <div className={styles.sectionVideo}>
             <iframe
               style={{ width: "100%", height: "100%", border: "none" }}
-              src="https://drive.google.com/file/d/1mRC1ygp5W-lJagxYucOhRNY4ILQlZT9p/preview?usp=drivesdk"
+              src="https://drive.google.com/file/d/1epnYQEEVe3KQsZTN8OyXlPsyJYPs8sOY/preview?usp=drivesdk"
               allow="encrypted-media"
             ></iframe>
           </div>
