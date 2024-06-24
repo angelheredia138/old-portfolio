@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page assets/Pages.module.css";
 import placeholderImage from "./page assets/placeholder.jpg";
 import myFace from "./page assets/my face.png";
@@ -6,9 +6,16 @@ import { Link } from "react-router-dom";
 import BlogAlertModal from "../components/BlogAlertModal";
 
 const HomePage = () => {
+  const [theme, setTheme] = useState<string>("");
+
+  useEffect(() => {
+    const currentTheme = document.body.className || "body";
+    setTheme(currentTheme);
+  }, []);
+
   return (
     <div className="container">
-      <BlogAlertModal />
+      <BlogAlertModal theme={theme} />
 
       <div className="row align-items-center" style={{ padding: "100px 0" }}>
         <div className="col-md-6">

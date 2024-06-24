@@ -28,3 +28,10 @@ body {
   background-color: #5f6f52 !important; /* Green background */
   color: #fefae0 !important; /* Light text */
 }
+.alert-link.body-dark-mode {
+  color: #ffdd57; /* Light yellow for dark mode */
+}
+
+.alert-link.body {
+  color: #d9534f; /* Red for light mode */
+}

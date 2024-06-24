@@ -3,7 +3,11 @@ import React, { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const BlogAlertModal = () => {
+interface BlogAlertModalProps {
+  theme: string;
+}
+
+const BlogAlertModal: React.FC<BlogAlertModalProps> = ({ theme }) => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -23,13 +27,16 @@ const BlogAlertModal = () => {
       </Modal.Header>
       <Modal.Body>
         Check out my latest updates and blog posts{" "}
-        <Link to="/blog" className="alert-link">
+        <Link to="/blog" className={`alert-link ${theme}`}>
           here
         </Link>
         !
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={handleClose}>
+        <Button
+          variant={theme === "body-dark-mode" ? "light" : "secondary"}
+          onClick={handleClose}
+        >
           Close
         </Button>
       </Modal.Footer>
