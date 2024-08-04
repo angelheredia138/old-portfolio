@@ -1,5 +1,5 @@
-// DarkModeToggle.tsx
 import React, { useEffect, useState } from "react";
+import { useLoading } from "../../src/Context/LoadingContext";
 
 interface DarkModeToggleProps {
   isDarkMode: boolean;
@@ -11,6 +11,7 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({
   toggleDarkMode,
 }) => {
   const [mode, setMode] = useState(isDarkMode);
+  const { isLoading } = useLoading();
 
   useEffect(() => {
     setMode(isDarkMode);
@@ -19,6 +20,10 @@ const DarkModeToggle: React.FC<DarkModeToggleProps> = ({
   const handleClick = () => {
     toggleDarkMode();
   };
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <button

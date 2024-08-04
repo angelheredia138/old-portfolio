@@ -4,6 +4,64 @@ import styles from "./page assets/Pages.module.css";
 const BlogPage: React.FC = () => {
   const blogEntries = [
     {
+      date: "August 3, 2024",
+      title:
+        "Creating a Spotify Data Visualization: A Journey Through Django and D3.js",
+      content: `
+        <p><strong>Introduction</strong></p>
+        <p>As a music enthusiast and a data geek, I wanted to combine my interests and create a project that visualizes my Spotify listening habits. This project, a Spotify Data Visualization, was my first experience using Django in a production environment and hosting a backend using Amazon ECS. Here’s a detailed account of my journey, the challenges I faced, and the solutions I implemented.</p>
+
+        <p><strong>Getting Started</strong></p>
+        <p>I began by setting up a Django backend to handle data retrieval from the Spotify API. This included setting up endpoints to fetch data such as top artists, top tracks, and listening history. The backend also handled user authentication and data storage.</p>
+
+        <p><strong>Backend Setup</strong></p>
+        <p>Key tasks included:</p>
+        <ul>
+          <li>Setting up Django and necessary dependencies like djangorestframework and django-cors-headers.</li>
+          <li>Creating models to store Spotify data.</li>
+          <li>Implementing API views to handle data requests.</li>
+          <li>Using Celery for asynchronous tasks like fetching and updating data periodically.</li>
+        </ul>
+
+        <p><strong>Challenges:</strong></p>
+        <ul>
+          <li><strong>Environment Variables:</strong> Managing sensitive data like Spotify API keys securely using environment variables.</li>
+          <li><strong>Data Fetching:</strong> Ensuring efficient and reliable data fetching from Spotify’s API.</li>
+        </ul>
+
+        <p><strong>Building the Frontend</strong></p>
+        <p>The frontend was built using React and Vite. I used D3.js for creating interactive and dynamic data visualizations. The frontend displayed various charts such as bar charts, scatter plots, and radar charts, providing insights into listening habits.</p>
+
+        <p><strong>Challenges:</strong></p>
+        <ul>
+          <li><strong>Integration with Backend:</strong> Ensuring seamless data flow between the frontend and backend.</li>
+          <li><strong>D3.js Complexity:</strong> Learning and implementing D3.js for complex data visualizations.</li>
+        </ul>
+
+        <p><strong>Feature Implementation</strong></p>
+        <ul>
+          <li><strong>Spotify Wrapped-Style Presentation:</strong> Created a scrolling feature for navigating through different visualizations.</li>
+          <li><strong>Interactive Charts:</strong> Implemented various interactive charts to display top artists, top tracks, and listening history.</li>
+          <li><strong>Responsive Design:</strong> Ensured the visualizations looked great on all devices.</li>
+        </ul>
+
+        <p><strong>Deployment and Hosting</strong></p>
+        <p>For the backend, I chose Amazon ECS to ensure a robust and scalable deployment. This was my first experience using Django in a production environment, and ECS provided the necessary infrastructure to handle the backend operations smoothly.</p>
+
+        <p><strong>Final Product</strong></p>
+        <p>The final product features:</p>
+        <ul>
+          <li><strong>User Authentication:</strong> Secure login via Spotify.</li>
+          <li><strong>Data Visualizations:</strong> Various charts providing insights into listening habits.</li>
+          <li><strong>Interactive UI:</strong> User-friendly and interactive interface built with React and D3.js.</li>
+          <li><strong>Scalable Backend:</strong> Robust backend setup using Django and hosted on Amazon ECS.</li>
+        </ul>
+
+        <p><strong>Conclusion</strong></p>
+        <p>This project was a significant learning experience, from using Django in production to creating complex visualizations with D3.js. It combined my love for music and data, resulting in a tool that provides valuable insights into my listening habits. If you have any questions or feedback, feel free to reach out!</p>
+      `,
+    },
+    {
       date: "June 23, 2024",
       title:
         "Building a Spotify Playback Controller: My Journey from Start to Finish",
@@ -77,6 +135,11 @@ const BlogPage: React.FC = () => {
     },
     // Add more blog entries as needed
   ];
+
+  // Sort blog entries by date from most recent to least recent
+  blogEntries.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 
   return (
     <div className="container">

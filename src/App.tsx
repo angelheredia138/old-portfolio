@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -6,15 +5,17 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ResumePage from "./pages/ResumePage";
 import ProjectPage from "./pages/ProjectPage";
+import PastProjectsPage from "./pages/PastProjectsPage";
+import BlogPage from "./pages/BlogPage";
 import DarkModeToggle from "./components/DarkModeToggle";
 import ThemeSelector from "./components/ThemeSelector";
 import {
   ThemeSelectorProvider,
   useThemeSelector,
 } from "./components/ThemeSelectorContext";
+import { LoadingProvider } from "./Context/LoadingContext";
 import "./App.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import BlogPage from "./pages/BlogPage";
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
@@ -44,21 +45,24 @@ const App: React.FC = () => {
 
   return (
     <ThemeSelectorProvider>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/resume" element={<ResumePage />} />
-          <Route path="/projects" element={<ProjectPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-        </Routes>
-        <DarkModeToggle
-          isDarkMode={isDarkMode}
-          toggleDarkMode={toggleDarkMode}
-        />
-        <ThemeSelectorWrapper />
-      </BrowserRouter>
+      <LoadingProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/resume" element={<ResumePage />} />
+            <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/past-projects" element={<PastProjectsPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+          </Routes>
+          <DarkModeToggle
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
+          />
+          <ThemeSelectorWrapper />
+        </BrowserRouter>
+      </LoadingProvider>
     </ThemeSelectorProvider>
   );
 };

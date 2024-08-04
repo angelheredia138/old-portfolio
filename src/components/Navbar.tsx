@@ -1,12 +1,19 @@
+// src/components/Navbar.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Navbar.module.css"; // Make sure styles are imported
+import styles from "./Navbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useLoading } from "../../src/Context/LoadingContext";
 
 const Navbar = () => {
+  const { isLoading } = useLoading();
   const [isOpen, setIsOpen] = useState(false);
+
+  if (isLoading) {
+    return null;
+  }
 
   const toggle = () => setIsOpen(!isOpen);
   const closeNavbar = () => setIsOpen(false);
@@ -83,6 +90,15 @@ const Navbar = () => {
                 onClick={closeNavbar}
               >
                 Projects
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`nav-link ${styles.navLink}`}
+                to="/past-projects"
+                onClick={closeNavbar}
+              >
+                Past Projects
               </Link>
             </li>
             <li className="nav-item">

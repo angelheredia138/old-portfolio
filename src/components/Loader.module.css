@@ -1,0 +1,42 @@
+/* src/components/Loader.module.css */
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  z-index: 1000;
+  color: #ffffff;
+}
+
+.typingAnimation {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "Fira Code", monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.2); /* Light grey with transparency */
+  border-top: 8px solid #ffffff; /* White */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

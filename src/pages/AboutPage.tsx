@@ -50,6 +50,7 @@ const AboutPage: React.FC = () => {
             src={websiteBefore}
             alt="first iteration"
             className={styles.sectionBigImg}
+            onLoad={() => {}}
           />
         </div>
       </div>
@@ -75,6 +76,7 @@ const AboutPage: React.FC = () => {
             src={discordStart}
             alt="discord start"
             className={styles.sectionBigImg}
+            onLoad={() => {}}
           />
         </div>
         <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
@@ -97,6 +99,7 @@ const AboutPage: React.FC = () => {
             src={dayThree}
             alt="day three"
             className={styles.sectionBigImg}
+            onLoad={() => {}}
           />
         </div>
         <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
@@ -139,7 +142,12 @@ const AboutPage: React.FC = () => {
           to lead to other pages for convenience.
         </p>
         <div className="col-md-12" style={{ textAlign: "center" }}>
-          <img src={daySix} alt="day six" className={styles.sectionBigImg} />
+          <img
+            src={daySix}
+            alt="day six"
+            className={styles.sectionBigImg}
+            onLoad={() => {}}
+          />
         </div>
         <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
           Initially, I thought I had run into all the problems or moments of
@@ -163,7 +171,12 @@ const AboutPage: React.FC = () => {
           ran into my first issue with GitHub Pages.
         </p>
         <div className="col-md-12" style={{ textAlign: "center" }}>
-          <img src={fourOhFour} alt="404" className={styles.sectionBigImg} />
+          <img
+            src={fourOhFour}
+            alt="404"
+            className={styles.sectionBigImg}
+            onLoad={() => {}}
+          />
         </div>
         <p className={styles.sectionText1} style={{ padding: "15px 0px" }}>
           This 404 error was so, so frustrating. Apparently, GitHub Pages is not

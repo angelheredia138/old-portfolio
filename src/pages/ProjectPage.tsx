@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./page assets/Pages.module.css";
-import retroGames from "./page assets/retro games.png";
 import website from "./page assets/website.png";
 import { Link } from "react-router-dom";
 
@@ -45,7 +44,12 @@ const ProjectPage = () => {
           </p>
         </div>
         <div className="col-md-6">
-          <img src={website} alt="Website" className={styles.sectionBigImg} />
+          <img
+            src={website}
+            alt="Website"
+            className={styles.sectionBigImg}
+            onLoad={() => {}}
+          />
         </div>
       </div>
 
@@ -71,7 +75,7 @@ const ProjectPage = () => {
               GitHub{" "}
             </a>
             and try it out for yourself! If you'd like to check out a small
-            physical and techincal demo of it, check out this video on the
+            physical and technical demo of it, check out this video on the
             right!
           </p>
         </div>
@@ -85,42 +89,54 @@ const ProjectPage = () => {
           </div>
         </div>
       </div>
+
       <div className="row align-items-center" style={{ padding: "50px 0" }}>
         <div className="col-md-6">
-          <h2 className={styles.sectionTitle1}>Retro Games in JavaScript</h2>
+          <h2 className={styles.sectionTitle1}>Spotify Data Visualization</h2>
           <p className={styles.sectionText}>
-            The Retro Games Collection is one of my latest personal projects,
-            where I've recreated classic games like 2048, Pong, Snake, and
-            Minesweeper using React. This project allowed me to dive deep into
-            modern web technologies and enhance my JavaScript and game
-            development skills. Each game is fully interactive and provides a
-            nostalgic gaming experience with a modern twist. If you'd like to
-            explore the source code and see these games in action, check out the
-            Retro Games Collection on my{" "}
+            The Spotify Data Visualization project showcases my ability to
+            combine data analysis with interactive graphics. Using React and
+            Vite, I developed a series of charts that provide insights into
+            listening habits. This project includes a Spotify Wrapped-style
+            presentation, complete with a scrolling feature for navigating
+            through different visualizations. The charts were created using
+            D3.js and encompass various types such as bar charts, scatter plots,
+            and radar charts. This was also my first time using Django in
+            production and hosting the backend on Amazon ECS, ensuring a robust
+            and scalable deployment. For more details, you can check out the
+            source code on my
             <a
-              href="https://github.com/angelheredia138/"
+              href="https://github.com/angelheredia138/spotify-visualizer"
               className={styles.linkStyle}
             >
               {" "}
               GitHub
             </a>
-            . Or, visit it{" "}
-            <a
-              href="https://angel-heredia.com/retro-games-in-javascript"
-              className={styles.linkStyle}
-            >
-              {" "}
-              here
-            </a>{" "}
-            and play a few games!
+            , or visit the live demo below!
           </p>
         </div>
-        <div className="col-md-6">
-          <img
-            src={retroGames}
-            alt="RetroGameSimulator"
-            className={styles.sectionBigImg}
-          />
+        <div className="col-md-6" style={{ position: "relative" }}>
+          <div className={styles.sectionVideo}>
+            <iframe
+              style={{ width: "100%", height: "400px", border: "none" }}
+              src="https://angel-heredia.com/spotify-visualizer-frontend"
+              allow="encrypted-media"
+            ></iframe>
+          </div>
+          <a
+            href="https://angel-heredia.com/spotify-visualizer-frontend"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 1,
+              display: "block",
+            }}
+          ></a>
         </div>
       </div>
     </div>

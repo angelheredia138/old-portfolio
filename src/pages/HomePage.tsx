@@ -1,17 +1,30 @@
 import React, { useEffect, useState } from "react";
 import styles from "./page assets/Pages.module.css";
-import placeholderImage from "./page assets/placeholder.jpg";
 import myFace from "./page assets/my face.png";
 import { Link } from "react-router-dom";
 import BlogAlertModal from "../components/BlogAlertModal";
+import Loader from "../components/Loader";
+import { useLoading } from "../../src/Context/LoadingContext";
 
 const HomePage = () => {
+  const { isLoading, setIsLoading } = useLoading();
   const [theme, setTheme] = useState<string>("");
 
   useEffect(() => {
     const currentTheme = document.body.className || "body";
     setTheme(currentTheme);
-  }, []);
+
+    // Simulate image loading
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000); // Adjust the time as needed
+
+    return () => clearTimeout(timeout);
+  }, [setIsLoading]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className="container">
@@ -32,6 +45,7 @@ const HomePage = () => {
           <img src={myFace} alt="my face" className={styles.sectionImg} />
         </div>
       </div>
+
       {/* New Blog Page Section */}
       <div className="row align-items-center" style={{ padding: "50px 0" }}>
         <div className="col-md-12">
@@ -48,6 +62,23 @@ const HomePage = () => {
           </p>
         </div>
       </div>
+
+      {/* New Past Projects Section */}
+      <div className="row align-items-center" style={{ padding: "50px 0" }}>
+        <div className="col-md-12">
+          <h2 className={styles.sectionTitle1}>Past Projects Page!</h2>
+          <p className={styles.sectionText}>
+            I have also added a page for my past projects. These are older
+            projects that I am not actively updating, but you can still check
+            them out. Visit the past projects page{" "}
+            <Link to="/past-projects" className={styles.linkStyle}>
+              here
+            </Link>
+            !
+          </p>
+        </div>
+      </div>
+
       <div className="row align-items-center" style={{ padding: "50px 0" }}>
         <div className="col-md-12">
           <h2 className={styles.sectionTitle1}>Bit About Me</h2>
