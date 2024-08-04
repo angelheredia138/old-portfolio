@@ -102,9 +102,10 @@ const HomePage = () => {
           <h2 className={styles.sectionTitle1}>My Work</h2>
           <p className={styles.sectionText}>
             Currently, the work I am most proud of and displaying on this
-            portfolio is my app I developed a part of my Principles of Mobile
-            App Development class and THIS website. You can find more details
-            about these projects in the{" "}
+            portfolio are my three personal projects that I have developed this
+            summer, my Spotify Playback Controller, Spotify Data Visualization,
+            and the portfolio website you are currently on! You can find more
+            details about these projects in the{" "}
             <Link to="/projects" className={styles.linkStyle}>
               Projects tab
             </Link>{" "}
@@ -116,7 +117,14 @@ const HomePage = () => {
             </Link>{" "}
             page. You can find before and after pictures detailing my process
             building this website, as well as any future updates I make upon
-            publishing this website!
+            publishing this website! If you'd like to take a look at past
+            projects I have worked on, check out my{" "}
+            <Link to="/past-projects" className={styles.linkStyle}>
+              Past Projects tab.
+            </Link>{" "}
+            That is where all of my old projects that I don't feel are as cool
+            will go, I am still proud of them! But as my skills develop, I got
+            cooler things to show!
           </p>
         </div>
       </div>
