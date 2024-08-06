@@ -112,7 +112,7 @@ const ProjectPage = () => {
               {" "}
               GitHub
             </a>
-            , or visit the live demo below!
+            , or visit the live demo to the right!
           </p>
         </div>
         <div className="col-md-6" style={{ position: "relative" }}>
